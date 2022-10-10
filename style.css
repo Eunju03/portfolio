@@ -355,3 +355,13 @@ p {
   margin-top: 8px;
   background-color: var(--color-dark-white);
 }
+
+/* Contact */
+#contact {
+  background-color: var(--color-pink);
+}
+
+.contact__title {
+  margin: 32px 0;
+}
+
