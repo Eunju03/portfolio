@@ -111,6 +111,7 @@ p {
   background-color: var(--color-yellow);
   transition: all var(--animation-duration) ease-in-out;
   background-color: var(--color-yellow);
+  z-index: 1;
 }
 
 #navbar.navbar--dark {
@@ -341,7 +342,7 @@ p {
 .project__img {
   max-width: 100%;
   max-height: 100%;
-  align-self: center`;
+  align-self: center;
 }
 
 .project__description {
@@ -375,6 +376,7 @@ p {
   left: 50%;
   width: 25px;
   height: 2px;
+  transform: translateX(-50%);
   margin-left: -12px;
   margin-top: 8px;
   background-color: var(--color-dark-white);
