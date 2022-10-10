@@ -140,16 +140,19 @@ p {
   border: 1px solid transparent;
   border-radius: var(--size-border-radius);
   cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: var(--size-border-radius);
 }
 
-.navbar__menu__item.active {
+/* .navbar__menu__item.active {
   border: 1px solid var(--color-white);
   border-radius: var(--size-border-radius);
-}
+} */
 
 .navbar__menu__item:hover {
+  border-color: var(--color-white);
   background-color: var(--color-dark-pink);
-  border-radius: var(--size-border-radius);
+  
 }
 
 .navbar__toggle-btn {
@@ -366,7 +369,7 @@ p {
 }
 
 .project__description h3 {
-  color: var(--color-white);
+  color: var(--color-orange);
 }
 
 .project__description h3:after {
@@ -374,10 +377,10 @@ p {
   display: block;
   position: relative;
   left: 50%;
-  width: 25px;
+  width: 50px;
   height: 2px;
   transform: translateX(-50%);
-  margin-left: -12px;
+  /* margin-left: -12px; */
   margin-top: 8px;
   background-color: var(--color-dark-white);
 }
@@ -417,19 +420,29 @@ p {
   .navbar__toggle-btn {
     display: block;
   }
+
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-pink);
   }
 
-  .navbar_menu {
+  #navbar.navbar--dark {
+    padding: 16px;
+  }
+
+  .navbar__menu {
     flex-direction: column;
     text-align: center;
     width: 100%;
     display: none;
   }
 
-  .about__majors {
+  .navbar__menu.open {
+    display: block;
+  }
+
+  .about__school {
     flex-direction: column;
   }
 
