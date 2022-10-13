@@ -1,10 +1,10 @@
 html {  scroll-behavior: smooth; }
 
-.profile-size{
+/* .profile-size{
     width: 300px;
     height: 300px;
     border-radius: 50%;
-}
+} */
 
 /* Global */
 
@@ -24,12 +24,12 @@ html {  scroll-behavior: smooth; }
 --color-black: #000000;
 --color-light-yellow: rgb(240, 211, 83);
 
-/* Font size */
---font-large: 48px;
---font-medium: 28px;
---font-regular: 18px;
---font-small: 16px;
---font-micro: 14px;
+   /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
 
 /* Font weight */
 --weight-bold: 700;
@@ -174,7 +174,7 @@ p {
 .home__avatar {
   width: 250px;
   height: 250px;
-  
+  border-radius: 50%;
   border: 2px solid var(--color-light-white);
 }
 
@@ -190,6 +190,10 @@ p {
   padding: 8px 12px;
   border: 2px solid var(--color-black);
   border-radius: var(--size-border-radius);
+}
+
+.home__contact:hover {
+  background-color: var(--color-pink);
 }
 
 /* Section common */
@@ -418,8 +422,20 @@ p {
 /* For below 768px screen width */
 /* 스타일링에 관련된건 본론 차이점만 최소한의 정보만 미디어 쿼리에서 작성 */
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
   .navbar__toggle-btn {
     display: block;
+    top: 16px;
+    right: 16px;
+    font-size: var(--font-medium);
   }
 
   #navbar {
@@ -442,13 +458,20 @@ p {
   .navbar__menu.open {
     display: block;
   }
+  
+  .section {
+    padding: 16px;
+    padding-top: 40px;
+  }
 
-  .about__school {
+  .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
   }
 
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
 
   .skillset {
@@ -458,4 +481,15 @@ p {
   .project {
     flex-grow: 1;
   }
+
+  .arrow-up {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    right: 16px;
+    left: 16px;
+  }
+
+
 }
